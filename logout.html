@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>You Logout Successfully</h1>
+<p>Redirect in <span id="sec"></span> sec</p>
+<script>
+var countDown = 5;
+var d = setInterval(() => {
+	document.querySelector("#sec").innerText = countDown;
+	countDown--;
+	if(countDown == 0) {
+		clearInterval(d);
+		location.href = "login.html";
+	}
+}, 1000);
+</script>
+</body>
+</html>
